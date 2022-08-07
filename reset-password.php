@@ -95,23 +95,34 @@ Destruye la sesión y redirige a la página de inicio de sesión (login.php)*/
 		<header class="header">
 			<?php include("includes/cabecera.php"); ?>
 		</header>
-		<main class="contenido">
-			<h2>Cambio contraseña</h2>
-        <p>Complete este formulario para restablecer su contraseña.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
-                <label>Nueva contraseña</label>
-                <input type="password" name="new_password" value="<?php echo $new_password; ?>">
-                <span><?php echo $new_password_err; ?></span><br>
-            
-                <label>Confirmar contraseña</label>
-                <input type="password" name="confirm_password" >
-                <span><?php echo $confirm_password_err; ?></span><br>
-            
-                <input type="submit" value="Enviar"><br>
-                <a class="btn btn-link" href="home.php">Cancelar</a>
-           
-        </form>
-		</main>
+		<div class="contenido">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <h2 align="center">Cambio contraseña</h2><br><br>
+        <p align="center">Complete este formulario para restablecer su contraseña.</p><br><br>
+        <table align="center">
+        <tr align="center">
+          <td nowrap="nowrap" align="right">Nueva Contraseña:</td>
+          <td>
+          <input type="password" class="campo" name="new_password" id="strPassword">
+          <span><?php echo $new_password_err; ?></span>
+          </td>
+        </tr>
+        <tr align="center">
+          <td nowrap="nowrap" align="right">Confirmar Contraseña:</td>
+          <td>
+            <input type="password" class="campo" name="confirm_password" id="strPassword">
+          <span><?php echo $confirm_password_err; ?></span></td>
+        </tr>
+        <tr align="center">
+          <td nowrap="nowrap" align="right">&nbsp;</td>
+          <td><br><br><input type="submit" class="boton" value="Cambiar Contraseña" id="botoninsertar" /></td>
+          <td><br><br><a class="btn btn-link" href="home.php">Cancelar</a></td>
+        </tr>
+       </table>
+      <input type="hidden" name="MM_insert" value="form1" />
+      
+  </form>
+		</div>
 		<aside class="sidebar">
 			<?php include("includes/afterbody.php"); ?>
 		</aside>
