@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0; /* la eliminación del margen superior resuelve un problema que origina que los márgenes escapen de la etiqueta div contenedora. El margen inferior restante lo mantendrá separado de los elementos de que le sigan. */
+  padding-right: 15px;
+  padding-left: 15px; /* la adición de relleno a los lados del elemento dentro de las divs, en lugar de en las divs propiamente dichas, elimina todas las matemáticas de modelo de cuadro. Una div anidada con relleno lateral también puede usarse como método alternativo. */
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.sidebar1 {
+  float: left;
+  background-color: #fff;
+  border: 1px solid #bbbabc;
+  width: 140px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: inset 0 0 8px #dcddde;
+  -moz-box-shadow: inset 0 0 8px #dcddde;
+  -webkit-box-shadow: inset 0 0 8px #dcddde;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+/* ~~ El pie de página ~~ */
+.footer {
+  padding: 10px 0;
+  position: relative; /* esto da a IE6 hasLayout para borrar correctamente */
+  clear: both; /* esta propiedad de borrado fuerza a .container a conocer dónde terminan las columnas y a contenerlas */
+  background-color: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+/* ~~ clases float/clear varias ~~ */
+.fltrt {
+  /* esta clase puede utilizarse para que un elemento flote en la parte derecha de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+  float: right;
+  margin-left: 8px;
+}
+.fltlft {
+  /* esta clase puede utilizarse para que un elemento flote en la parte izquierda de la página. El elemento flotante debe preceder al elemento junto al que debe aparecer en la página. */
+  float: left;
+  margin-right: 8px;
+}
+.clearfloat {
+  /* esta clase puede situarse en una <br /> o div vacía como elemento final tras la última div flotante (dentro de #container) si #footer se elimina o se saca fuera de #container */
+  clear: both;
+  height: 0;
+  font-size: 1px;
+  line-height: 0px;
+}
+
+.bor {
+  background-color: #d1d1d1;
+  border: 1px solid #ececec;
+  color: rgb(34, 34, 34);
+  text-align: center;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 8px;
+  min-width: 110px;
+}
+
+.boton {
+  background-color: #1b7ec3;
+  border: 1px solid #13659e;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 8px;
+  min-width: 110px;
+}
+.boton:hover {
+  background-color: #225980;
+  color: #fff;
+  cursor: pointer;
+}
+.campo {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 5px;
+  width: 200px;
+  border: 1px solid rgb(185, 185, 185);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 13px;
+}
+.capaerrores {
+  display: none;
+  font-size: 12px;
+  background-color: #ffb7b9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 5px;
+  margin-top: 3px;
+  font-weight: 100;
+  color: #a50505;
+}
+.capaexito {
+  display: none;
+  font-size: 12px;
+  background-color: #8bea92;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 5px;
+  margin-top: 3px;
+  font-weight: 100;
+  color: #276d2c;
+}
+.capafrecuentes {
+  font-size: 12px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 5px;
+  margin-top: 3px;
+  font-weight: 100;
+  color: #000000;
+  border-top-color: #ccc;
+  border-right-color: #ccc;
+  border-bottom-color: #ccc;
+  border-left-color: #ccc;
+}
+.lateralnewboxes {
+  color: #276d2c;
+}
